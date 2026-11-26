@@ -1,0 +1,20 @@
+[Unit]
+Description=Jungle Leopard USB screen system monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/jlscreen/jlscreen.py run
+Restart=always
+RestartSec=5
+# Runs as root so it can read CPU package power (RAPL) and the GPU.
+# Locked down otherwise: no writes outside /dev, no home directories.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+
+[Install]
+WantedBy=multi-user.target

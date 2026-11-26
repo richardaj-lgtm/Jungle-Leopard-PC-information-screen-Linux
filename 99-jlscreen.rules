@@ -1,0 +1,4 @@
+# Jungle Leopard / Hongtai USB system-monitor screens (USB CDC serial, vendor 33c3)
+# Stable name /dev/jlscreen, open to local users, and keep ModemManager from
+# probing it with modem AT commands (which upsets the screen's firmware).
+SUBSYSTEM=="tty", ATTRS{idVendor}=="33c3", SYMLINK+="jlscreen", MODE="0666", ENV{ID_MM_DEVICE_IGNORE}="1", TAG+="systemd", ENV{SYSTEMD_WANTS}+="jlscreen.service"
