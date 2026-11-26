@@ -2,6 +2,8 @@
 
 ![Dashboard preview](preview.png)
 
+**Status: tested and working** on a Jungle Leopard 9.16" (1920 × 462) screen under Ubuntu, with an AMD Ryzen 9 9900X (November 2026). It ran correctly straight after `sudo ./install.sh`, with no changes to the default settings.
+
 Drives the Jungle Leopard 9.16" (1920 × 462) USB mini screen from Linux. It reads CPU, GPU, memory, fan, disk and network data and shows it as a live dashboard, refreshed every second, in place of the Windows app.
 
 Panels, left to right:
